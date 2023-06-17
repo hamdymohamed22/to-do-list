@@ -1,7 +1,7 @@
 <?php
 require_once "../App.php";
 
-if ($request->haspost($request->get("id"))) {
+if ($request->has($request->get("id"))) {
 
 $id = $request->get("id");
         
@@ -18,15 +18,15 @@ $id = $request->get("id");
 
         if ($output) {
             $session->set("success"," data deleted succesfully");
-            $request->header("../index.html");
+            $request->header("../index.php");
             
         }else{
         $session->set("errors",["failed"]);
-        $request->header("../index.html");
+        $request->header("../index.php");
     }
     }else{
         $session->set("errors",$errors);
-        $request->header("../index.html");
+        $request->header("../index.php");
     }
 
 }

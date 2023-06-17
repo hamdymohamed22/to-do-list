@@ -22,16 +22,14 @@ if ($request->has($request->post("submit"))) {
         $output = $stm->execute();
         if ($output) {
             $session->set("success"," data updated succesfully");
-            $request->header("../edit.html");
+            $request->header("../edit.php");
         }
-
     }
         
     }else{
         $session->set("errors",$errors);
-        $request->header("../index.html");
+        $request->header("../index.php");
     }
-
 }
 
 }

@@ -1,5 +1,6 @@
 <?php 
 namespace ToDo\Classes;
+
 class Validation {
     private $errors_arr = [];
     public function validator($key,$value,$rules){

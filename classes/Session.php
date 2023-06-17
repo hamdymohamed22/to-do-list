@@ -11,7 +11,7 @@ class Session
 
     public function set($key, $value)
     {
-        $_SESSION[$key] = "$value";
+        $_SESSION[$key] = $value;
         return $this;
     }
     public function has($key)
@@ -20,8 +20,7 @@ class Session
     }
     public function get($key)
     {
-        echo $_SESSION[$key];
-        return $this;
+        return $_SESSION[$key];
     }
 
     public function remove($key)
